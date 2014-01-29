@@ -263,3 +263,45 @@ table.roster td {
 .player-card {
 
 }
+
+
+
+main: {
+    padding:10px;
+}
+main > .left {
+    float:left;
+    width:650px;
+}
+main > .left:after {
+    clear: left;
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+main > .tiles > * {
+    float:left;
+    width:320px;
+}
+main > .tiles > :nth-child(even) {
+    margin-left:10px;
+}
+main > .tiles > :last-child:after {
+    clear: left;
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+main > .right {
+    float:right;
+    width:320px;
+}
+main > .right:after {
+    clear: right;
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
