@@ -1,0 +1,18 @@
+<?
+include '_init.php'; 
+
+$articles = $db->query("select * from articles order by pubdate desc limit 10");
+$section = 'news';
+include '_header.php';
+?>
+<header>
+    <h1>News</h1>
+</header>
+<? while ($article = $articles->fetchObject()): ?>
+<article class="feed">
+    <img src="photo/nova.jpg" alt="some pic">
+    <h1><a href="<?= $article->url ?>"><?= $article->title ?></a></h1>
+    <p><?= $article->synopsis ?>
+</article>
+<? endwhile; ?>
+<? include '_footer.php'; ?>

@@ -1,0 +1,265 @@
+@font-face {
+    font-family: Quicksand-Regular; 
+    src: url('ui/font/Quicksand-Regular.otf');
+}
+
+html {
+    background-color:#eee;
+}
+body {
+    background-attachment:fixed;
+    background-image:url('img/bg-roster.jpg');
+    background-position:center 40px;
+    background-repeat:no-repeat;
+    font-family:sans-serif;
+    margin:0;
+    padding-top:350px;
+}
+body.news {
+    background-image:url('img/bg-news.jpg');
+}
+body.sponsors {
+    background-image:url('img/bg-sponsors.jpg');
+}
+body.venue {
+    background-image:url('img/bg-venue.jpg');
+}
+body.schedule {
+    background-image:url('img/bg-schedule.jpg');
+}
+
+body>header {
+    background-attachment:fixed;
+    background-color:#eee;
+    background-image:inherit;
+    background-position:center 40px;
+    background-repeat:no-repeat;
+    height:90px;
+    left:0px;
+    position:fixed;
+    right:0px;
+    top:0px;
+    z-index:3;
+}
+body>header>nav {
+    background-image:url('img/nav-bg.png');
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+    height:56px;
+    margin-top:30px;
+}
+body>header>nav>div {
+    margin:0 auto;
+    position:relative;
+    width:1000px;
+}
+body>header>nav>div>img {
+    background-color:black;
+    border:3px solid black;
+    border-radius:48px;
+    display:block;
+    height:90px;
+    position:absolute;
+    top:-20px;
+    width:90px;
+}
+body>header>nav ul {
+    list-style-type:none;
+    height:62px;
+    margin:0 auto;
+    padding-left:100px;
+    width:1000px;
+}
+body>header>nav li {
+    font-size:24px;
+    font-weight:bold;
+    float:left;
+    height:62px;
+}
+body>header>nav li a {
+    color:#eee;
+    line-height:62px;
+    margin:0 12px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+body>header>nav li a:hover {
+    text-decoration:underline;
+}
+#content {
+    background-color:white;
+    border-bottom:4px solid #ce1f2c;
+    border-top:4px solid #ce1f2c;
+    box-shadow:0 0 8px rgba(0,0,0,.6);
+    margin:0 auto;
+    padding:5px;
+    width:990px;
+}
+main {
+    font-size:16px;
+    min-height:500px;
+    width:685px;
+}
+main>header, .full-article>header {
+    /*border-bottom:1px solid #ddd;*/
+    padding:5px;
+    margin-bottom:10px;
+}
+main>header h1, .full-article>header h1 {
+    color:#444;
+    font-family:Quicksand-Regular;
+    font-size:48px;
+    margin:0px;
+}
+.full-article figure {
+    margin:0px;
+}
+.full-article img {
+    width:685px;
+}
+#social {
+    position:absolute;
+    right:5px;
+    text-align:center;
+    top:10px;
+    width:300px;
+}
+#content>aside {
+    height:700px;
+    float:right;
+    width:300px;
+}
+article.feed {
+    background-color:#f6f6f6;
+    background-image:linear-gradient(to bottom, #fff, #eee);
+    box-shadow:0px 0px 6px rgba(0,0,0,.4);
+    float:left;
+    height:270px;
+    margin:10px 5px;
+    width:330px;
+}
+article.feed:hover {
+    box-shadow:0px 0px 6px rgba(0,0,0,.6);
+    cursor:pointer;
+}
+article.feed img {
+    height:141px;
+    width:330px;
+}
+article.feed h1 {
+    font-size:16px;
+    margin:5px;
+}
+article.feed h1 a {
+    color:#ce1f2c;
+    text-decoration:none;
+}
+article.feed:hover h1 a {
+    color:#ce1f2c;
+    text-decoration:underline;
+}
+article.feed p {
+    color:#444;
+    font-size:16px;
+    margin:5px;
+}
+table.schedule {
+    border-collapse:collapse;
+    margin:5px;
+    width:675px;
+}
+table.schedule tr {
+    border-bottom:1px solid #eee;
+}
+.schedule .date {
+    font-size:12px;
+}
+.schedule .opp.away:before {
+    content:"@ ";
+} 
+ul.content {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+ul.content li {
+    background-color:#f6f6f6;
+    box-shadow:0px 0px 6px rgba(0,0,0,.4);
+    margin:5px;
+}
+div.sponsor {
+    border-bottom:1px solid #eee;
+    margin:5px;
+}
+img.sponsor-logo {
+    box-shadow:0px 0px 6px rgba(0,0,0,.3);
+    float:right;
+}
+.sponsor-about {
+    font-size:16px;
+}
+section.venue {
+    margin:20px 5px 40px 5px;
+}
+.venue-type {
+    color:#ce1f2c;
+    font-weight:bold;
+    margin:0;
+    text-transform:uppercase;
+}
+.venue-type:before {
+    content:"\00bb  ";
+}
+section.venue h1 {
+    color:#333;
+    margin:0;
+}
+.venue-address {
+    font-size:12px;
+    margin:0;
+}
+iframe.venue-map {
+    border:1px solid #eee;
+    display:block;
+    margin:10px auto;
+    padding:2px;
+}
+table.roster {
+    border-collapse:collapse;
+}
+table.roster td {
+    border-top:1px solid #eee;
+    font-size:14px;
+    height:32px;
+}
+.player-card {
+    border:1px solid #eee;
+    float:left;
+    height:80px;
+    margin:5px;
+    padding:5px 5px 5px 90px;
+    position:relative;
+    width:235px;
+}
+.player-card h2 {
+    font-size:16px;
+    margin:0;
+}
+.player-card img {
+    border:0;
+    height:80px;
+    left:5px;
+    position:absolute;
+    top:5px;
+    width:80px;
+}
+.player-card p {
+    font-size:14px;
+    margin:0px;
+}
+.player-card {
+
+}
+.player-card {
+
+}
