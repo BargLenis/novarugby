@@ -86,26 +86,59 @@ body>header>nav li a {
 body>header>nav li a:hover {
     text-decoration:underline;
 }
-#content {
+main {
     background-color:white;
     border-bottom:4px solid #ce1f2c;
     border-top:4px solid #ce1f2c;
     box-shadow:0 0 8px rgba(0,0,0,.6);
+    font-size:16px;
     margin:0 auto;
-    padding:5px;
+    padding:10px;
     width:990px;
 }
-main {
-    font-size:16px;
-    min-height:500px;
-    width:685px;
+main > .left {
+    float:left;
+    width:650px;
 }
-main>header, .full-article>header {
+main:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+main > .tiles > * {
+    float:left;
+    width:320px;
+}
+main > .tiles > :nth-of-type(even) {
+    margin-left:10px;
+}
+main > .tiles > :last-child:after {
+    clear: left;
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+main > .right {
+    float:right;
+    width:320px;
+}
+main > .right:after {
+    clear: right;
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+section > header, .full-article>header {
     /*border-bottom:1px solid #ddd;*/
     padding:5px;
     margin-bottom:10px;
 }
-main>header h1, .full-article>header h1 {
+section > header > h1, .full-article>header h1 {
     color:#444;
     font-family:Quicksand-Regular;
     font-size:48px;
@@ -266,42 +299,4 @@ table.roster td {
 
 
 
-main: {
-    padding:10px;
-}
-main > .left {
-    float:left;
-    width:650px;
-}
-main > .left:after {
-    clear: left;
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-}
-main > .tiles > * {
-    float:left;
-    width:320px;
-}
-main > .tiles > :nth-child(even) {
-    margin-left:10px;
-}
-main > .tiles > :last-child:after {
-    clear: left;
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-}
-main > .right {
-    float:right;
-    width:320px;
-}
-main > .right:after {
-    clear: right;
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-}
+
