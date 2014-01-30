@@ -3,13 +3,13 @@ $articles = $db->prepare("select * from articles order by pubdate desc limit 10"
 $articles->bindColumn('url', $url);
 $articles->bindColumn('title', $title);
 $articles->bindColumn('synopsis', $synopsis);
-$section = 'news';
+$articles->execute();
 ?>
 <header>
     <h1>News</h1>
 </header>
 <? while ($articles->fetch(PDO::FETCH_BOUND)): ?>
-<article class="content-sm feed">
+<article class=" feed">
     <img src="photo/nova.jpg" alt="some pic">
     <h1><a href="<?= $url ?>"><?= $title ?></a></h1>
     <p><?= $synopsis ?>
