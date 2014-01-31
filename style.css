@@ -86,8 +86,8 @@ body>header>nav li a {
 body>header>nav li a:hover {
     text-decoration:underline;
 }
-main {
-    background-color:white;
+#content {
+    background:white url('img/logo-bg.jpg') no-repeat right bottom;
     border-bottom:4px solid #ce1f2c;
     border-top:4px solid #ce1f2c;
     box-shadow:0 0 8px rgba(0,0,0,.6);
@@ -96,10 +96,10 @@ main {
     padding:10px;
     width:990px;
 }
-main > .left {
-    float:left;
+main {
     width:650px;
 }
+#content:after,
 main:after {
     clear: both;
     content: " ";
@@ -108,36 +108,48 @@ main:after {
     height: 0;
     visibility: hidden;
 }
-main > .tiles > * {
-    float:left;
-    width:320px;
-}
-main > .tiles > :nth-of-type(even) {
-    margin-left:10px;
-}
-main > .tiles > :last-child:after {
-    clear: left;
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-}
-main > .right {
+aside {
     float:right;
     width:320px;
 }
-main > .right:after {
-    clear: right;
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
+main>header {
+    margin-bottom:20px;
 }
-section > header, .full-article>header {
-    /*border-bottom:1px solid #ddd;*/
-    padding:5px;
-    margin-bottom:10px;
+h1, h2, h3, h4 {
+    color:#444;
+    font-family:Quicksand-Regular;
+    font-size:48px;
+    margin:0;
 }
+h1 {
+    background:url('img/logo2.png') no-repeat left center;
+    padding-left:53px;
+}
+h2 {
+    font-size:32px;
+}
+h3 {
+    font-size:24px;
+}
+h4 {
+    font-size:20px;
+}
+h5 {
+    font-size:16px;
+}
+h6 {
+    font-size:14px;
+}
+a {
+    color:#ce1f2c;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+
+/* Old needs to be modified */
+
 section > header > h1, .full-article>header h1 {
     color:#444;
     font-family:Quicksand-Regular;
@@ -155,11 +167,6 @@ section > header > h1, .full-article>header h1 {
     right:5px;
     text-align:center;
     top:10px;
-    width:300px;
-}
-#content>aside {
-    height:700px;
-    float:right;
     width:300px;
 }
 article.feed {
@@ -199,7 +206,7 @@ article.feed p {
 table.schedule {
     border-collapse:collapse;
     margin:5px;
-    width:675px;
+    width:100%;
 }
 table.schedule tr {
     border-bottom:1px solid #eee;
@@ -272,7 +279,7 @@ table.roster td {
     margin:5px;
     padding:5px 5px 5px 90px;
     position:relative;
-    width:235px;
+    width:218px;
 }
 .player-card h2 {
     font-size:16px;

@@ -7,19 +7,17 @@ $roster->bindColumn(4, $weight);
 $roster->bindColumn(5, $school);
 $roster->execute();
 ?>
-<section class="left tiles">
-    <header>
-        <h1>Roster</h1>
-    </header>
+<header>
+    <h1>Roster</h1>
+</header>
 
-    <? while ($roster->fetch(PDO::FETCH_BOUND)): ?>
-    <div class="content-sm player-card">
-        <h2><?= $name ?></h2>
-        <img src="img/user-icon.png" alt="<?= $name ?> Profile">
-        <p class="position"><?= $position ?>
-        <p class="height-weight"><?= $height ? floor($height/12) . "' " . $height%12 . '"' : null, $height && $weight ? ', ' : '', $weight ?  $weight . ' lbs' : '' ?>
-        <p class="position">
-        <p class="school"><?= $school ?>
-    </div>
-    <? endwhile ?>
-</section>
+<? while ($roster->fetch(PDO::FETCH_BOUND)): ?>
+<div class="content-sm player-card">
+    <h2><?= $name ?></h2>
+    <img src="img/user-icon.png" alt="<?= $name ?> Profile">
+    <p class="position"><?= $position ?>
+    <p class="height-weight"><?= $height ? floor($height/12) . "' " . $height%12 . '"' : null, $height && $weight ? ', ' : '', $weight ?  $weight . ' lbs' : '' ?>
+    <p class="position">
+    <p class="school"><?= $school ?>
+</div>
+<? endwhile ?>

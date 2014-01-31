@@ -21,4 +21,6 @@
                 </div>
             </nav>
         </header>
-        <main>
+        <div id="content">
+<? require 'view/_aside.php' ?>
+            <main>

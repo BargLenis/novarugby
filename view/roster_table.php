@@ -8,30 +8,28 @@ $roster->bindColumn(5, $weight);
 $roster->bindColumn(6, $school);
 $roster->execute();
 ?>
-<main>
-    <header>
-        <h1>Roster</h1>
-    </header>
-    <table class="roster">
-        <thead>
-            <tr>
-                <th>Player
-                <th>Position
-                <th>Height
-                <th>Weight
-                <th>School
-            </tr>
-        </thead>
-        <tbody>
-    <? while ($roster->fetch(PDO::FETCH_BOUND)): ?>
-            <tr>
-                <td><?= $lname, ', ', $fname ?>
-                <td><?= $position ?>
-                <td><?= $height ? floor($height/12) . "' " . $height%12 . '"' : null ?>
-                <td><?= $weight ?>
-                <td><?= $school ?>
-            </tr>
-    <? endwhile ?>
-        </tbody>
-    </table>
-</main>
+<header>
+    <h1>Roster</h1>
+</header>
+<table class="roster">
+    <thead>
+        <tr>
+            <th>Player
+            <th>Position
+            <th>Height
+            <th>Weight
+            <th>School
+        </tr>
+    </thead>
+    <tbody>
+<? while ($roster->fetch(PDO::FETCH_BOUND)): ?>
+        <tr>
+            <td><?= $lname, ', ', $fname ?>
+            <td><?= $position ?>
+            <td><?= $height ? floor($height/12) . "' " . $height%12 . '"' : null ?>
+            <td><?= $weight ?>
+            <td><?= $school ?>
+        </tr>
+<? endwhile ?>
+    </tbody>
+</table>
