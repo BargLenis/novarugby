@@ -1,6 +1,4 @@
-<header>
-    <h1>Venue</h1>
-</header>
+ <h1>Venue</h1>
 <section class="venue">
     <header>
         <p class="venue-type">Match Field

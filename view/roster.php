@@ -7,10 +7,7 @@ $roster->bindColumn(4, $weight);
 $roster->bindColumn(5, $school);
 $roster->execute();
 ?>
-<header>
-    <h1>Roster</h1>
-</header>
-
+<h1 style="margin-bottom:20px">Roster</h1>
 <? while ($roster->fetch(PDO::FETCH_BOUND)): ?>
 <div class="content-sm player-card">
     <h2><?= $name ?></h2>

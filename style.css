@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
 @font-face {
     font-family: Quicksand-Regular; 
     src: url('ui/font/Quicksand-Regular.otf');
@@ -11,7 +12,7 @@ body {
     background-image:url('img/bg-roster.jpg');
     background-position:center 40px;
     background-repeat:no-repeat;
-    font-family:sans-serif;
+    font-family:Lato, sans-serif;
     margin:0;
     padding-top:350px;
 }
@@ -115,15 +116,21 @@ aside {
 main>header {
     margin-bottom:20px;
 }
+main > * {
+    margin-top:20px;
+}
 h1, h2, h3, h4 {
     color:#444;
     font-family:Quicksand-Regular;
-    font-size:48px;
+    font-size:40px;
     margin:0;
 }
 h1 {
-    background:url('img/logo2.png') no-repeat left center;
-    padding-left:53px;
+    background-color:white;
+    border-left:10px solid #ce1f2c;
+    margin-left:-10px;
+    padding-left:10px;
+    /*background:url('img/logo2.png') no-repeat left center;*/
 }
 h2 {
     font-size:32px;
@@ -146,6 +153,47 @@ a {
 }
 a:hover {
     text-decoration:underline;
+}
+
+article.news-item {
+    background-color:#f6f6f6;
+    height:180px
+}
+article.news-item figure {
+    float:left;
+    height:180px;
+    margin:0 10px 0 0;
+    overflow:hidden;
+    text-align:center;
+    width:320px;
+}
+article.news-item figure img {
+    height:180px;
+}
+article.news-item time {
+    color:#444;
+    font-size:14px;
+    display:block;
+    margin:0 10px 5px 10px;
+    padding-top:5px;
+}
+article.news-item h4 {
+    margin:5px 10px;
+}
+article.news-item p {
+    margin:5px 10px;
+}
+article.news-item:nth-of-type(even) figure {
+    float:right;
+    margin:0 0 0 10px;
+}
+
+section.dues {
+    background-color:#f6f6f6;
+    border:2px solid white;
+    margin:32px 2px 22px 2px;
+    outline:2px solid #f6f6f6;
+    padding:10px;
 }
 
 /* Old needs to be modified */
@@ -228,11 +276,11 @@ ul.content li {
     margin:5px;
 }
 div.sponsor {
-    border-bottom:1px solid #eee;
-    margin:5px;
+    margin:20px 10px;
 }
 img.sponsor-logo {
-    box-shadow:0px 0px 6px rgba(0,0,0,.3);
+    border:1px solid #eee;
+    padding:1px;
     float:right;
 }
 .sponsor-about {

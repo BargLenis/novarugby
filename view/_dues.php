@@ -1,0 +1,28 @@
+<section class="dues">
+	<h2>Player Dues</h2>
+    <p> NOVA is supported by our proud sponsors, but each player must also donate each season. Fall 2013 dues are <b>$150</b> for
+        returning players and <b>$100</b> for new players.
+    <h3>Pay Dues Online</h3> 
+    <p> Make the payment through our PayPal account by clicking on the button below.
+    <form action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_blank'> 
+        <input type='hidden' name='cmd' value='_xclick'> 
+        <input type='hidden' name='business' value='novarugby@netzero.net'> 
+        <input type='hidden' name='item_name' value='Player Dues'> 
+        <input type='hidden' name='cn' value='Player Dues'> 
+        <input type='hidden' name='currency_code' value='USD'> 
+        <input type='hidden' name='lc' value='US'> 
+        <select name='amount'> 
+            <option value='100.00'>New Player: $100</option> 
+            <option value='150.00'>Returning Player: $150</option> 
+        </select><br /><br /> 
+        <input type='image' src='https://www.paypal.com/en_US/i/btn/x-click-but6.gif' style='border:0px;' name='submit' alt='PayPal for Player Dues'> 
+    </form>
+    <h3>To pay by check:</h3>
+    <p> Make the check payable to NOVA RFC and either deliver it at practice to one of the coaches/officers or mail your payment to:
+    <address>
+        NOVA Rugby<br> 
+        PO Box 3596<br> 
+        Merrifield, VA 22116-3915
+    </address>
+    <p><i>Support your club by paying your dues on time.</i>
+</section>

@@ -1,25 +1,22 @@
 <?
 $articles = $db->prepare("select * from articles order by pubdate desc limit 10");
 $articles->bindColumn('url', $url);
+$articles->bindColumn('imgurl', $imgurl);
 $articles->bindColumn('title', $title);
+$articles->bindColumn('pubdate', $pubdate);
 $articles->bindColumn('synopsis', $synopsis);
 $articles->bindColumn('body', $body);
 $articles->execute();
-$articles->fetch(PDO::FETCH_BOUND);
 ?>
-<header>
-    <h1>News</h1>
-</header>
-<article>
-    <img src="photo/nova.jpg" alt="some pic" style="height:279px; width:100%;">
-    <h3><a href="<?= $url ?>"><?= $title ?></a></h3>
-    <p><?= $synopsis ?>
-    <p><?= $body ?>
-</article>
+<h1>News</h1>
 <? while ($articles->fetch(PDO::FETCH_BOUND)): ?>
-<article class="content-sm feed">
-    <img src="photo/nova.jpg" alt="some pic">
+<article class="news-item">
+    <figure>
+        <img src="<?= $imgurl ?>" alt="some pic">
+    </figure>
+    <time datetime="<?= $pubdate ?>"><?= date('l, F j', strtotime($pubdate)) ?></time>
     <h4><a href="<?= $url ?>"><?= $title ?></a></h4>
     <p><?= $synopsis ?>
 </article>
 <? endwhile ?>
+<? require '_dues.php' ?>

@@ -1,9 +1,7 @@
 <?
 
 ?>
-<header>
-    <h1>Schedule</h1>
-</header>
+<h1>Schedule</h1>
 <table class="content-md schedule">
     <tbody>
         <tr>
