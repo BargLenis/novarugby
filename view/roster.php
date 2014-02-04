@@ -10,7 +10,7 @@ $roster->execute();
 <h1 style="margin-bottom:20px">Roster</h1>
 <? while ($roster->fetch(PDO::FETCH_BOUND)): ?>
 <div class="content-sm player-card">
-    <h2><?= $name ?></h2>
+    <h5><?= $name ?></h5>
     <img src="img/user-icon.png" alt="<?= $name ?> Profile">
     <p class="position"><?= $position ?>
     <p class="height-weight"><?= $height ? floor($height/12) . "' " . $height%12 . '"' : null, $height && $weight ? ', ' : '', $weight ?  $weight . ' lbs' : '' ?>
