@@ -1,0 +1,28 @@
+<?
+$articles = $db->prepare("select * from articles order by pubdate desc limit 10");
+$articles->bindColumn('url', $url);
+$articles->bindColumn('imgurl', $imgurl);
+$articles->bindColumn('title', $title);
+$articles->bindColumn('pubdate', $pubdate);
+$articles->bindColumn('synopsis', $synopsis);
+$articles->bindColumn('body', $body);
+$articles->execute();
+?>
+<?= '<?' ?>xml version="1.0" encoding="utf-8"?>
+<?= '<?' ?>xml-stylesheet type="text/css" media="screen" href="http://localhost/rss.css"?>
+<rss version="2.0">
+    <channel>
+        <title>NOVA Rugby</title>
+        <link>http://www.novarugby.com/</link>
+        <description>NOVA Rugby</description>
+<? while ($articles->fetch(PDO::FETCH_BOUND)): ?>
+        <item>
+            <title><?= $title ?></title>
+            <link>http://www.novarugby.com/<?= $url ?></link>
+            <guid>http://www.novarugby.com/<?= $url ?></guid>
+            <description><?= $synopsis ?></description>
+            <enclosure url="http://www.novarugby.com/<?= $imgurl ?>" type="image/jpeg"/>
+        </item>
+<? endwhile ?>
+    </channel>
+</rss>

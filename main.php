@@ -17,9 +17,18 @@ $db = new PDO('mysql:host=localhost;dbname=novarugby', 'novarugby', 'Cardinal7')
 
 $file = 'view/' . $section . '.' . $ext;
 if (file_exists($file)) {
-    require 'view/_header.html';
-    require $file;
-    require 'view/_footer.html';
+    if ($ext == 'html') {
+        require 'view/_header.html';
+        require $file;
+        require 'view/_footer.html';
+    } elseif ($ext == 'rss') {
+        header('Content-type: text/xml');
+        require $file;
+    } else {
+        header('HTTP/1.0 404 Not Found');
+        require 'view/404.html';
+        exit();
+    }
 } else {
     header('HTTP/1.0 404 Not Found');
     require 'view/404.html';
