@@ -227,13 +227,17 @@ section > header > h1, .full-article>header h1 {
     width:685px;
 }
 #social {
+    height:50px;
+    margin:-5px 0 5px 0;
+}
+#social div {
     background-color:white;
+    height:40px;
     width:310px;
-    margin:0 0 5px 0;
     padding:5px;
     text-align:center;
 }
-#social.sticky {
+#social.sticky div {
     box-shadow:0px 6px 5px -5px #aaa;
     position:fixed;
     top:90px;

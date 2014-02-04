@@ -1,9 +1,11 @@
 <aside>
     <div id="social">
-        <a href="https://twitter.com/NovaRugby"><img src="img/icon-twitter.png" alt="Twitter"></a>
-        <a href="https://www.facebook.com/groups/novarugby/"><img src="img/icon-facebook.png" alt="Facebook"></a>
-        <a href="news.rss"><img src="img/icon-rss.png" alt="RSS"></a>
-        <a href="mailto:newnovarecruit@gmail.com"><img src="img/icon-email.png" alt="Email"></a>
+        <div>
+            <a href="https://twitter.com/NovaRugby"><img src="img/icon-twitter.png" alt="Twitter"></a>
+            <a href="https://www.facebook.com/groups/novarugby/"><img src="img/icon-facebook.png" alt="Facebook"></a>
+            <a href="news.rss"><img src="img/icon-rss.png" alt="RSS"></a>
+            <a href="mailto:newnovarecruit@gmail.com"><img src="img/icon-email.png" alt="Email"></a>
+        </div>
     </div>
     <a class="twitter-timeline" width="320" height="400" data-dnt="true" href="https://twitter.com/NovaRugby" data-widget-id="430773984968187904">Tweets by @NovaRugby</a>
     <section class="contacts">
