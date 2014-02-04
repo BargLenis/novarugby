@@ -9,7 +9,7 @@ if (preg_match('~([a-z]*)/{0,1}([a-z]*)\.?([a-z]*)$~',$rel_url,$matches)) {
     $ext = $matches[3] ? $matches[3] : 'html';
 } else {
     header('HTTP/1.0 404 Not Found');
-    require 'view/404.php';
+    require 'view/404.html';
     exit();
 }
 
@@ -17,11 +17,11 @@ $db = new PDO('mysql:host=localhost;dbname=novarugby', 'novarugby', 'Cardinal7')
 
 $file = 'view/' . $section . '.' . $ext;
 if (file_exists($file)) {
-    require 'view/_header.php';
+    require 'view/_header.html';
     require $file;
-    require 'view/_footer.php';
+    require 'view/_footer.html';
 } else {
     header('HTTP/1.0 404 Not Found');
-    require 'view/404.php';
+    require 'view/404.html';
     exit();
 }
