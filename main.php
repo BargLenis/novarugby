@@ -3,12 +3,14 @@ $base_url = '/novarugby/';
 $url = $_SERVER['REQUEST_URI'];
 $rel_url = preg_replace('/^'.preg_quote($base_url,'/').'/','',$url);
 
-if (preg_match('~([a-z]*)/{0,1}([a-z]*)$~',$rel_url,$matches)) {
+if (preg_match('~([a-z]*)/{0,1}([a-z]*)\.?([a-z]*)$~',$rel_url,$matches)) {
     $section = $matches[1] == "" ? 'news' : $matches[1];
     $pg = $matches[2];
+    $ext = $matches[3];
+    echo $ext;
 } else {
     header('HTTP/1.0 404 Not Found');
-    require 'view/404.html';
+    require 'view/404.php';
     exit();
 }
 
@@ -21,6 +23,6 @@ if (file_exists($file)) {
     require 'view/_footer.php';
 } else {
     header('HTTP/1.0 404 Not Found');
-    require 'view/404.html';
+    require 'view/404.php';
     exit();
 }
