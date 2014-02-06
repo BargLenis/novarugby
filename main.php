@@ -1,9 +1,11 @@
 <?php
+define('ROOT', __DIR__);
+
 $base_url = '/novarugby/';
 $url = $_SERVER['REQUEST_URI'];
 $rel_url = preg_replace('/^'.preg_quote($base_url,'/').'/','',$url);
 
-if (preg_match('~([a-z]*)/{0,1}([a-z]*)\.?([a-z]*)$~',$rel_url,$matches)) {
+if (preg_match('~([a-z]*)/{0,1}([a-z-]*)\.?([a-z]*)$~',$rel_url,$matches)) {
     $section = $matches[1] == "" ? 'news' : $matches[1];
     $pg = $matches[2];
     $ext = $matches[3] ? $matches[3] : 'html';
@@ -15,7 +17,7 @@ if (preg_match('~([a-z]*)/{0,1}([a-z]*)\.?([a-z]*)$~',$rel_url,$matches)) {
 
 $db = new PDO('mysql:host=localhost;dbname=novarugby', 'novarugby', 'Cardinal7');
 
-$file = 'view/' . $section . '.' . $ext;
+$file = 'view/' . $section . ($pg ? '/' . $pg : '') . '.' . $ext;
 if (file_exists($file)) {
     if ($ext == 'html') {
         require 'view/_header.html';

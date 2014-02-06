@@ -3,9 +3,12 @@
     font-family: Quicksand-Regular; 
     src: url('ui/font/Quicksand-Regular.otf');
 }
-p {
+address, p, li {
     line-height:1.35;
     margin:0.5em 0; 
+}
+p.center {
+    text-align:center;
 }
 form p {
     text-align:center;
@@ -89,7 +92,7 @@ body>header>nav>div>img {
 }
 body>header>nav ul {
     list-style-type:none;
-    height:62px;
+    height:56px;
     margin:0 auto;
     padding-left:100px;
     width:1000px;
@@ -98,11 +101,12 @@ body>header>nav li {
     font-size:24px;
     font-weight:bold;
     float:left;
-    height:62px;
+    height:56px;
+    margin:0;
 }
 body>header>nav li a {
     color:#eee;
-    line-height:62px;
+    line-height:56px;
     margin:0 12px;
     text-decoration:none;
     text-transform:uppercase;
@@ -138,13 +142,27 @@ main>header {
     margin:0 0 20px -20px;
     padding-left:10px;
 }
-main > * {
+main>header h1+h2:before {
+    content:"\A0\BB\A0";
+}
+main > section, main > table, main > ul, main > article, main > div {
     margin-top:20px;
+}
+main figure {
+    border:1px solid #eee;
+    margin:10px;
+    padding:1px;
+}
+header>h1, header>h2, header>h3, header>h4 {
+    display:inline;
 }
 h1, h2, h3, h4 {
     color:#444;
     font-family:Quicksand-Regular;
-    margin:0;
+    margin:16px 0 0 0;
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child {
+    margin-top:0;
 }
 h5, h6 {
     margin:0;
@@ -180,6 +198,7 @@ article.news-item {
     height:180px
 }
 article.news-item figure {
+    border:0;
     float:left;
     height:180px;
     margin:0 10px 0 0;
@@ -208,7 +227,7 @@ article.news-item:nth-of-type(even) figure {
     margin:0 0 0 10px;
 }
 
-section.dues {
+section.contrast {
     background-color:#f6f6f6;
     border:2px solid white;
     margin:32px 2px 22px 2px;
