@@ -3,6 +3,10 @@
     font-family: Quicksand-Regular; 
     src: url('ui/font/Quicksand-Regular.otf');
 }
+p {
+    line-height:1.35;
+    margin:0.5em 0; 
+}
 form p {
     text-align:center;
 }
@@ -349,9 +353,6 @@ ul.content li {
     background-color:#f6f6f6;
     box-shadow:0px 0px 6px rgba(0,0,0,.4);
     margin:5px;
-}
-div.sponsor {
-    margin:20px 10px;
 }
 img.sponsor-logo {
     border:1px solid #eee;
