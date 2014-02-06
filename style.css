@@ -113,11 +113,11 @@ body>header>nav li a:hover {
     box-shadow:0 0 8px rgba(0,0,0,.6);
     font-size:16px;
     margin:0 auto;
-    padding:10px;
-    width:990px;
+    padding:10px 20px 20px 20px;
+    width:960px;
 }
 main {
-    width:650px;
+    width:630px;
 }
 #content:after,
 main:after {
@@ -128,12 +128,11 @@ main:after {
     height: 0;
     visibility: hidden;
 }
-aside {
-    float:right;
-    width:320px;
-}
 main>header {
-    margin-bottom:20px;
+    background-color:white;
+    border-left:10px solid #ce1f2c;
+    margin:0 0 20px -20px;
+    padding-left:10px;
 }
 main > * {
     margin-top:20px;
@@ -147,12 +146,7 @@ h5, h6 {
     margin:0;
 }
 h1 {
-    background-color:white;
-    border-left:10px solid #ce1f2c;
     font-size:40px;
-    margin-left:-10px;
-    padding-left:10px;
-    /*background:url('img/logo2.png') no-repeat left center;*/
 }
 h2 {
     font-size:32px;
@@ -217,20 +211,73 @@ section.dues {
     outline:2px solid #f6f6f6;
     padding:10px;
 }
-aside section {
-    border-left:2px solid #eee;
-    margin-top:20px;
-}
-aside h2 {
-    border-left:8px solid #eee;
-    padding-left:10px;
-}
 .contact > * {
     margin:4px 20px 4px 18px;
 }
 .contact + .contact {
     margin-top:16px;
 }
+
+ul.roster {
+    list-style-type:none;
+    padding:0;
+}
+ul.roster li {
+    border:1px solid #eee;
+    float:left;
+    height:80px;
+    margin:0;
+    padding:4px 4px 4px 89px;
+    position:relative;
+    width:215px;
+}
+ul.roster li:nth-child(even) {
+    margin-left:10px;
+}
+ul.roster li + li + li {
+    margin-top:10px;
+}
+ul.roster img {
+    border:0;
+    height:80px;
+    left:5px;
+    position:absolute;
+    top:5px;
+    width:80px;
+}
+ul.roster p {
+    font-size:14px;
+    margin:0px;
+}
+aside#sidebar {
+    float:right;
+    width:310px;
+}
+aside#sidebar section {
+    border-left:2px solid #eee;
+    margin-top:20px;
+}
+aside#sidebar header {
+    border-left:8px solid #eee;
+    padding-left:10px;
+}
+#social {
+    height:50px;
+    margin:-5px 0 5px 0;
+}
+#social div {
+    background-color:white;
+    height:40px;
+    width:300px;
+    padding:5px;
+    text-align:center;
+}
+#social.sticky div {
+    box-shadow:0px 6px 5px -5px #aaa;
+    position:fixed;
+    top:90px;
+}
+
 /* Old needs to be modified */
 
 section > header > h1, .full-article>header h1 {
@@ -244,22 +291,6 @@ section > header > h1, .full-article>header h1 {
 }
 .full-article img {
     width:685px;
-}
-#social {
-    height:50px;
-    margin:-5px 0 5px 0;
-}
-#social div {
-    background-color:white;
-    height:40px;
-    width:310px;
-    padding:5px;
-    text-align:center;
-}
-#social.sticky div {
-    box-shadow:0px 6px 5px -5px #aaa;
-    position:fixed;
-    top:90px;
 }
 article.feed {
     background-color:#f6f6f6;
@@ -364,38 +395,5 @@ table.roster td {
     font-size:14px;
     height:32px;
 }
-.player-card {
-    border:1px solid #eee;
-    float:left;
-    height:80px;
-    margin:5px;
-    padding:5px 5px 5px 90px;
-    position:relative;
-    width:218px;
-}
-.player-card h2 {
-    font-size:16px;
-    margin:0;
-}
-.player-card img {
-    border:0;
-    height:80px;
-    left:5px;
-    position:absolute;
-    top:5px;
-    width:80px;
-}
-.player-card p {
-    font-size:14px;
-    margin:0px;
-}
-.player-card {
-
-}
-.player-card {
-
-}
-
-
 
 

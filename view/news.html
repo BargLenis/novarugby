@@ -8,7 +8,9 @@ $articles->bindColumn('synopsis', $synopsis);
 $articles->bindColumn('body', $body);
 $articles->execute();
 ?>
-<h1>News</h1>
+<header>
+    <h1>News</h1>
+</header>
 <? while ($articles->fetch(PDO::FETCH_BOUND)): ?>
 <article class="news-item">
     <figure>
